@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html {
+            perspective: 800px;
+        }
+
+        .cube {
+            width: 200px;
+            height: 200px;
+            /*background-color: #bfa;*/
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            /*transform: rotateX(45deg) rotateY(45deg);*/
+            animation:test 20s infinite linear;
+        }
+        @keyframes test {
+            from{
+                transform: rotateX(0deg) rotateZ(0deg);
+            }
+            to{
+                transform: rotateX(360deg) rotateZ(360deg);
+            }
+        }
+
+        .cube div {
+            width: 200px;
+            height: 200px;
+            opacity: 0.8;
+            position: absolute;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .box5 {
+            transform: rotateY(90deg) translatez(100px);
+        }
+
+        .box1 {
+            transform: rotateY(-90deg) translatez(100px);
+        }
+        .box3 {
+            transform: rotateX(90deg) translatez(100px);
+        }
+
+        .box4 {
+            transform: rotateX(-90deg) translatez(100px);
+        }
+        .box2 {
+            transform: translatez(100px);
+        }
+
+        .box6 {
+            transform: rotateY(180deg) translatez(100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <!--引入图片-->
+        <div class="box2">
+            <img src="../lib/复仇者联盟/06.jpg">
+        </div>
+        <div class="box5">
+            <img src="../lib/复仇者联盟/05.jpg">
+        </div>
+        <div class="box3">
+             <img src="../lib/复仇者联盟/04.jpg">
+        </div>
+        <div class="box4">
+             <img src="../lib/复仇者联盟/03.jpg">
+        </div>
+        <div class="box1">
+             <img src="../lib/复仇者联盟/02.jpg">
+        </div>
+        <div class="box6">
+            <img src="../lib/复仇者联盟/01.jpg">
+        </div>
+    </div>
+</body>
+</html>

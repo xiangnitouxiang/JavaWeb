@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        #outer{
+            width: 500px;
+            margin: 50px auto;
+            background-color: white;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var img = document.getElementsByTagName("img")[0];
+            var imgArr = ["..\\lib\\复仇者联盟\\01.jpg",
+                "..\\lib\\复仇者联盟\\02.jpg",
+                "..\\lib\\复仇者联盟\\03.jpg",
+                "..\\lib\\复仇者联盟\\04.jpg",
+                "..\\lib\\复仇者联盟\\05.jpg",
+                "..\\lib\\复仇者联盟\\06.jpg"]
+            var prev = document.getElementById("prev");
+            var next = document.getElementById("next");
+            var index = 0;
+            prev.onclick = function () {
+                index--;
+                if(index<0){
+                    index = 5;
+                }
+                img.src = imgArr[index];
+            }
+            next.onclick = function () {
+                index++;
+                if(index>5){
+                    index = 0;
+                }
+                img.src = imgArr[index];
+            }
+        }
+    </script>
+</head>
+<body>
+   <div id="outer">
+       <img src="..\lib\复仇者联盟\01.jpg" alt="图片" width=500>
+       <button id="prev">上一张</button>
+       <button id="next">下一张</button>
+   </div>
+
+</body>
+</html>

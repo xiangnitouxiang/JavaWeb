@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var obj = new Object();
+    obj.age = 18;
+    obj.name = "jiang";
+    obj.fun = function () {
+        alert("姓名"+this.name+":年龄"+this.age);
+    }
+    alert(obj.fun());
+
+    //另一种方式
+    var obj1 = {
+        name:"jiang",   //这里是逗号，不是分号
+        age:18,
+        fun:function () {
+            alert("姓名"+this.name+":年龄"+this.age);
+        }
+    }
+    alert(obj.fun());
+
+</script>
+
+</body>
+</html>

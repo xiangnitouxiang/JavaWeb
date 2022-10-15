@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function fun1() {
+            alert("调用无参函数");
+        }
+       // fun1();
+        function fun2(a,b) {
+            alert("a="+a+"b="+b);
+        }
+       // fun2(2,"aaa");
+        function fun3(a,b) {
+            var result = a+b;
+            return result;
+        }
+       // alert(fun3(10,20));
+        //定义函数的另一种方式
+        var fun4 = function () {
+            alert("无参函数的调用");
+        }
+        fun4();
+        //不允许重载
+    </script>
+</head>
+<body>
+
+</body>
+</html>
